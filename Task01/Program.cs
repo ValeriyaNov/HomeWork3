@@ -12,15 +12,13 @@ if ((n>0 && (n>100000 || n<10000)) || (n<0 && (n<-100000 || n>-10000)) || n==0)
    return;
 }
 
-int a5=n%10;
-int f=n/10;
-int a4=f%10;
-int f1=f/100;
-int a2=f1%10;
-int f2=f1/10;
-int a1=f2%10;
+int a=n%100;
+int b=n/1000;
+int b1=b/10;
+int b2=b%10;
+int c=b2*10+b1;
 
-if (a1==a5 && a2==a4)
+if (a==c)
 {
     WriteLine($"Число {n} является палиндромом");
 }
